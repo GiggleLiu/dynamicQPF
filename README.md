@@ -1,14 +1,21 @@
 # Simulating Dynamical Quantum Phase Transition
 
-## Model
+## Model Description
 1D Hamiltonian with periodic boundary condition
 $$ H(g) = -\sum_j \sigma_j^z\sigma_{j+1}^z + g\sigma_j^x $$
 
 Using Trotter decomposition, build a circuit with 500 steps, dt = 0.02.
 
-## Results
+The circuit and results can be found in Ref. Hong 2018.
 
 ## Benchmark (single thread)
+### Run benchmarks
+```bash
+$ cd src
+$ julia dqpt_yao.jl
+$ ipython dqpt_projectq.py
+$ <run QtVM>
+```
 
 The running time
 
