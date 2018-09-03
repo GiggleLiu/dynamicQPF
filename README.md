@@ -9,26 +9,27 @@ Using Trotter decomposition, build a circuit with 500 steps, dt = 0.02.
 The circuit and results can be found in Ref. Hong 2018.
 
 ## Benchmark (single thread)
+### Setup
 To Run Benchmarks in `src` folder
-#### Yao.jl
+##### Yao.jl
 1. Download and install [Julia](https://julialang.org/downloads/)
-2. Install [Yao](Download and install [Anaconda](https://www.anaconda.com/download/)) and [BenchmarkTools](https://github.com/JuliaCI/BenchmarkTools.jl)
+2. Install packages [Yao](https://github.com/QuantumBFS/Yao.jl) and [BenchmarkTools](https://github.com/JuliaCI/BenchmarkTools.jl)
 3. To run benchmark code, type
 ```bash
 $ julia dqpt_yao.jl
 ```
 
-#### QtVM
+##### QtVM
 TODO
 
-#### ProjectQ
+##### ProjectQ
 1. Download and install [Anaconda](https://www.anaconda.com/download/)
-2. Install [ProjectQ](https://projectq.readthedocs.io/en/latest/tutorials.html)
+2. Install package [ProjectQ](https://projectq.readthedocs.io/en/latest/tutorials.html)
 3. To run benchmark code, type
 ```bash
 $ ipython dqpt_projectq.py
 ```
-
+### Results of Single Thread Benchmark
 The running time (in seconds)
 
 | Package  | 10 qubits | 20 qubits | 30 qubits |
@@ -43,7 +44,7 @@ The running time (in seconds)
 2. https://github.com/QuantumBFS/Yao.jl
 3. https://github.com/ProjectQ-Framework/ProjectQ
 
-## CPU Info (Only Single Thread Used)
+## CPU Info
 ```
 Architecture:          x86_64
 CPU op-mode(s):        32-bit, 64-bit
