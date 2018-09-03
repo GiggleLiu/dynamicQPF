@@ -2,8 +2,6 @@ from contexts import ProjectQContext
 from projectq.ops import CNOT, Rx, Rz, Tensor, Z, X, C
 from projectq.setups import default
 
-from profilehooks import profile
-
 def apply_entangler(qureg, pos):
     for i in pos:
         C(X) | (qureg[i], qureg[(i+1)%len(qureg)])
@@ -21,7 +19,6 @@ def apply_block(reg, theta, trafie):
     Tensor(Rx(trafie)) | reg
 
 
-#@profile
 def dynamical_qft(nbit, g, tmax, nslice):
     dt = tmax/nslice
     trafie = dt*g
@@ -43,4 +40,5 @@ nslice = 500
 tmax = 10
 
 #dynamical_qft(18, 2.0, 10.0, 500);
-get_ipython().run_line_magic('timeit', 'dynamical_qft(18, 2.0, 10.0, 500)')
+get_ipython().run_line_magic('timeit', 'dynamical_qft(10, 2.0, 10.0, 500)')
+get_ipython().run_line_magic('timeit', 'dynamical_qft(20, 2.0, 10.0, 500)')

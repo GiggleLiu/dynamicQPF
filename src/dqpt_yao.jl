@@ -45,4 +45,5 @@ end
 
 nslice = 500
 tmax = 10
-display(@benchmark dynamical_qft(18, 2.0, 10, 500))
+display(@benchmark dynamical_qft(10, 2.0, 10, 500))
+display(@benchmark dynamical_qft(20, 2.0, 10, 500))
