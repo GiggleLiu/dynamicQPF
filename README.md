@@ -32,11 +32,11 @@ $ ipython dqpt_projectq.py
 ### Results of Single Thread Benchmark
 The running time (in seconds)
 
-| Package  | 10 qubits | 20 qubits | 30 qubits |
-| -------- | --------- | --------- | --------- |
-| Yao      |   0.03    |     52    |           |
-| QtVM     |           |           |           |
-| ProjectQ |   2.06    |    226    |           |
+| Package         | 10 qubits | 20 qubits | 30 qubits |
+| --------------- | --------- | --------- | --------- |
+| Yao v0.2.0      |   0.03    |     52    |           |
+| QtVM            |           |           |           |
+| ProjectQ v0.4.1 |   2.06    |    226    |           |
 
 
 ## References

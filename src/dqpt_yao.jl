@@ -1,5 +1,4 @@
 using Yao
-using Yao.Blocks
 
 using BenchmarkTools
 
@@ -7,9 +6,9 @@ entangler(nbit::Int, offset::Int) = chain(nbit, control(nbit, i+offset, mod(i+of
 
 function build_block(nbit::Int, theta::Real, trafie::Real)
     # entanglers
-    entangler_A = entangler(nbit, 0)# |> cache
-    entangler_B = entangler(nbit, 1)# |> cache
-    entangler_AB = chain(entangler_A, entangler_B)# |> cache
+    entangler_A = entangler(nbit, 0) # |> cache
+    entangler_B = entangler(nbit, 1)  #|> cache
+    entangler_AB = chain(entangler_A, entangler_B)  #|> cache
     
     # rotations
     rz = Rz(theta)
@@ -45,5 +44,5 @@ end
 
 nslice = 500
 tmax = 10
-display(@benchmark dynamical_qft(10, 2.0, 10, 500))
+#display(@benchmark dynamical_qft(10, 2.0, 10, 500))
 display(@benchmark dynamical_qft(20, 2.0, 10, 500))

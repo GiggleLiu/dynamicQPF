@@ -108,7 +108,7 @@ class ProjectQContext(object):
         return wf
 
     def _viz_circuit(self):
-        Measure | self.qureg
+        #Measure | self.qureg
         self.eng.flush()
         # print latex code to draw the circuit:
         s = self.backend.get_latex()
